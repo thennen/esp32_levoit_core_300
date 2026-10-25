@@ -30,7 +30,7 @@ I went with **option 2**.
 
 A capacitive touch pad registers a press when the capacitance to ground goes up. Each emulated button uses a tiny NPN common-emitter switch with a **10 pF** capacitor on its collector, wired to the pad's sense node. When the GPIO goes high, the transistor ties the cap to ground, which loads the pad about like a fingertip does. When the GPIO is low, the collector floats and the pad barely sees the extra part.
 
-The capacitance has to be **very low**. A through-hole FET, or even a through-hole BJT, added too much parasitic capacitance and threw off the touch sensing. What worked was **SMD (SOT-23) NPN transistors**, a **10 pF** ceramic cap on the collector, and a **33 kΩ** base resistor (0603, marked `333`). Everything was hand-soldered, and the SMD transistors are superglued to the board dead-bug style.
+The capacitance has to be **very low**. A through-hole FET, or even a through-hole BJT, added too much parasitic capacitance and threw off the touch sensing. What worked was **SMD (SOT-23) BC846B NPN transistors**, a **10 pF** ceramic cap on the collector, and a **33 kΩ** base resistor (0603, marked `333`). Everything was hand-soldered, and the SMD transistors are superglued to the board dead-bug style.
 
 Each press is a 500 ms pulse. Don't hold it on: the touch chip keeps recalibrating its baseline, so a "press" that's held down fades away.
 
@@ -85,7 +85,7 @@ For the full XIAO ESP32-C6 pinout, see [Seeed's getting-started page](https://wi
 | Qty | Part |
 |---|---|
 | 1 | Seeed Studio XIAO ESP32-C6 |
-| 2 | NPN BJT, SOT-23 (*part number TBD*) |
+| 2 | BC846B NPN BJT, SOT-23 |
 | 2 | 10 pF ceramic capacitor |
 | 2 | 33 kΩ resistor (0603) |
 | 4 | 18 kΩ resistor (through-hole) |
