@@ -66,8 +66,9 @@
     <text x="20" y="273" font-size="12" fill="#555">GPIO2 / GPIO21</text>
     <text x="180" y="243" text-anchor="middle">33 kΩ</text>
     <text x="180" y="287" text-anchor="middle" font-size="12" fill="#555">0603 "333"</text>
-    <text x="345" y="258">BC846B (NPN, SOT-23)</text>
-    <text x="345" y="275" font-size="12" fill="#555">(dead-bug, superglued)</text>
+    <text x="345" y="250">BC846B</text>
+    <text x="345" y="267" font-size="12" fill="#555">NPN, SOT-23</text>
+    <text x="345" y="283" font-size="12" fill="#555">(dead-bug, superglued)</text>
     <text x="322" y="214" font-size="12" fill="#555">C</text>
     <text x="250" y="254" font-size="12" fill="#555" text-anchor="middle">B</text>
     <text x="322" y="318" font-size="12" fill="#555">E</text>
