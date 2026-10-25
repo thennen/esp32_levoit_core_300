@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 610" width="960" height="610" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <rect width="960" height="610" fill="#ffffff"/>
+  <g stroke="#222" stroke-width="2" fill="none" stroke-linecap="round">
+    <!-- panel dividers -->
+    <line x1="480" y1="50" x2="480" y2="480" stroke="#bbb" stroke-dasharray="6 5"/>
+    <line x1="20" y1="495" x2="940" y2="495" stroke="#bbb" stroke-dasharray="6 5"/>
+
+    <!-- ===== A: touch press emulator ===== -->
+    <!-- KEY sense line -->
+    <line x1="215" y1="110" x2="430" y2="110"/>
+    <rect x="430" y="92" width="34" height="36" fill="#d9d9d9"/>
+    <!-- collector cap -->
+    <line x1="315" y1="110" x2="315" y2="166"/>
+    <line x1="295" y1="166" x2="335" y2="166" stroke-width="3"/>
+    <line x1="295" y1="178" x2="335" y2="178" stroke-width="3"/>
+    <line x1="315" y1="178" x2="315" y2="228"/>
+    <!-- GPIO and base resistor -->
+    <line x1="120" y1="260" x2="150" y2="260"/>
+    <rect x="150" y="250" width="60" height="20" fill="#fff"/>
+    <line x1="210" y1="260" x2="285" y2="260"/>
+    <!-- NPN -->
+    <circle cx="302" cy="260" r="30"/>
+    <line x1="285" y1="238" x2="285" y2="282" stroke-width="3"/>
+    <line x1="285" y1="250" x2="315" y2="228"/>
+    <line x1="285" y1="270" x2="315" y2="292"/>
+    <line x1="315" y1="292" x2="315" y2="340"/>
+    <!-- ground A -->
+    <line x1="295" y1="340" x2="335" y2="340"/>
+    <line x1="302" y1="347" x2="328" y2="347"/>
+    <line x1="309" y1="354" x2="321" y2="354"/>
+
+    <!-- ===== B: divider ===== -->
+    <line x1="600" y1="95" x2="600" y2="120"/>
+    <rect x="590" y="120" width="20" height="60" fill="#fff"/>
+    <line x1="600" y1="180" x2="600" y2="230"/>
+    <line x1="600" y1="205" x2="720" y2="205"/>
+    <rect x="590" y="230" width="20" height="60" fill="#fff"/>
+    <line x1="600" y1="290" x2="600" y2="320"/>
+    <line x1="580" y1="320" x2="620" y2="320"/>
+    <line x1="587" y1="327" x2="613" y2="327"/>
+    <line x1="594" y1="334" x2="606" y2="334"/>
+
+    <!-- ===== C: power ===== -->
+    <line x1="230" y1="545" x2="560" y2="545"/>
+    <line x1="230" y1="580" x2="560" y2="580"/>
+  </g>
+  <!-- emitter arrow -->
+  <polygon points="313,291 302,289 308,281" fill="#222"/>
+  <!-- junction dots -->
+  <g fill="#222">
+    <circle cx="315" cy="110" r="4"/>
+    <circle cx="600" cy="205" r="4"/>
+    <circle cx="600" cy="95" r="4"/>
+    <circle cx="720" cy="205" r="4"/>
+    <circle cx="120" cy="260" r="4"/>
+  </g>
+
+  <g fill="#222">
+    <text x="20" y="34" font-size="17" font-weight="bold">A. Touch-button press emulator (×2: Power, Speed)</text>
+    <text x="20" y="104">Holtek BS83B08A</text>
+    <text x="20" y="121">KEY1 / KEY4 sense line</text>
+    <text x="447" y="148" text-anchor="middle" font-size="12">touch pad</text>
+    <text x="345" y="177">10 pF</text>
+    <text x="345" y="194" font-size="12" fill="#555">(ceramic disc)</text>
+    <text x="20" y="256">XIAO D2 / D3</text>
+    <text x="20" y="273" font-size="12" fill="#555">GPIO2 / GPIO21</text>
+    <text x="180" y="243" text-anchor="middle">33 kΩ</text>
+    <text x="180" y="287" text-anchor="middle" font-size="12" fill="#555">0603 "333"</text>
+    <text x="345" y="258">NPN, SOT-23</text>
+    <text x="345" y="275" font-size="12" fill="#555">(dead-bug, superglued)</text>
+    <text x="322" y="214" font-size="12" fill="#555">C</text>
+    <text x="250" y="254" font-size="12" fill="#555" text-anchor="middle">B</text>
+    <text x="322" y="318" font-size="12" fill="#555">E</text>
+    <text x="345" y="352">GND</text>
+    <text x="20" y="400" font-size="13">GPIO high → transistor saturates → the 10 pF is tied to GND</text>
+    <text x="20" y="418" font-size="13">and loads the pad like a fingertip ("press").</text>
+    <text x="20" y="440" font-size="13">GPIO low → collector floats; the 10 pF only sees C<tspan font-size="10" dy="3">CE</tspan><tspan dy="-3">, so</tspan></text>
+    <text x="20" y="458" font-size="13">the pad barely notices it and the real button still works.</text>
+
+    <text x="500" y="34" font-size="17" font-weight="bold">B. Speed-state readback (×4)</text>
+    <text x="500" y="80">J5 header speed line (5 V when active, one-hot)</text>
+    <text x="620" y="155">18 kΩ</text>
+    <text x="620" y="265">33 kΩ</text>
+    <text x="730" y="202">XIAO GPIO</text>
+    <text x="730" y="220" font-size="12" fill="#555">≈ 3.24 V when high</text>
+    <text x="630" y="338">GND</text>
+    <text x="680" y="300" font-size="13" fill="#555">V = 5 V × 33 / (18 + 33)</text>
+    <text x="680" y="318" font-size="13" fill="#555">   ≈ 3.24 V, ~0.1 mA</text>
+
+    <text x="500" y="372" font-weight="bold">Line</text>
+    <text x="640" y="372" font-weight="bold">XIAO pin</text>
+    <text x="760" y="372" font-weight="bold">GPIO</text>
+    <text x="500" y="396">Sleep</text><text x="640" y="396">D10</text><text x="760" y="396">GPIO18</text>
+    <text x="500" y="418">Speed 1</text><text x="640" y="418">D9</text><text x="760" y="418">GPIO20</text>
+    <text x="500" y="440">Speed 2</text><text x="640" y="440">D6</text><text x="760" y="440">GPIO16</text>
+    <text x="500" y="462">Speed 3</text><text x="640" y="462">D7</text><text x="760" y="462">GPIO17</text>
+
+    <text x="20" y="525" font-size="17" font-weight="bold">C. Power</text>
+    <text x="20" y="550">Core 300 logic board +5V</text>
+    <text x="20" y="585">Core 300 logic board GND</text>
+    <text x="570" y="550">XIAO 5V pin</text>
+    <text x="570" y="585">XIAO GND pin</text>
+  </g>
+</svg>

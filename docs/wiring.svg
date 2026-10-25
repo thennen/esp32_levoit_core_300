@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 690" width="960" height="690" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <rect width="960" height="690" fill="#ffffff"/>
+  <text x="20" y="32" font-size="17" font-weight="bold">XIAO ESP32-C6 → Core 300 control board (FLD-03)</text>
+  <text x="20" y="52" font-size="12" fill="#555">Top view, as installed: XIAO shield up, USB-C pointing left</text>
+
+  <!-- XIAO body (21 x 17.8 mm, pins on 2.54 mm pitch) -->
+  <rect x="314" y="186" width="332" height="282" rx="34" fill="#1e1e1e"/>
+  <rect x="282" y="264" width="70" height="126" rx="8" fill="#9a9a9a"/>
+  <text x="317" y="331" font-size="11" fill="#fff" text-anchor="middle">USB-C</text>
+  <rect x="392" y="252" width="210" height="150" rx="4" fill="#e8e8e8"/>
+  <text x="497" y="322" font-size="13" text-anchor="middle">XIAO</text>
+  <text x="497" y="340" font-size="13" text-anchor="middle">ESP32-C6</text>
+  <text x="372" y="262" font-size="11" fill="#fff" text-anchor="middle">B</text>
+  <text x="372" y="402" font-size="11" fill="#fff" text-anchor="middle">R</text>
+
+  <!-- pins: top row 5V GND 3V3 D10 D9 D8 D7 ; bottom row D0..D6 -->
+  <g fill="#c9a227">
+    <circle cx="360" cy="208" r="8"/><circle cx="400" cy="208" r="8"/><circle cx="440" cy="208" r="8"/>
+    <circle cx="480" cy="208" r="8"/><circle cx="520" cy="208" r="8"/><circle cx="560" cy="208" r="8"/>
+    <circle cx="600" cy="208" r="8"/>
+    <circle cx="360" cy="446" r="8"/><circle cx="400" cy="446" r="8"/><circle cx="440" cy="446" r="8"/>
+    <circle cx="480" cy="446" r="8"/><circle cx="520" cy="446" r="8"/><circle cx="560" cy="446" r="8"/>
+    <circle cx="600" cy="446" r="8"/>
+  </g>
+  <g fill="#fff" font-size="10" text-anchor="middle">
+    <text x="360" y="236">5V</text><text x="400" y="236">GND</text><text x="440" y="236">3V3</text>
+    <text x="480" y="236">D10</text><text x="520" y="236">D9</text><text x="560" y="236">D8</text>
+    <text x="600" y="236">D7</text>
+    <text x="360" y="428">D0</text><text x="400" y="428">D1</text><text x="440" y="428">D2</text>
+    <text x="480" y="428">D3</text><text x="520" y="428">D4</text><text x="560" y="428">D5</text>
+    <text x="600" y="428">D6</text>
+  </g>
+
+  <!-- wires -->
+  <g fill="none" stroke-width="3" stroke-linejoin="round">
+    <polyline points="360,200 360,150 250,150 250,100" stroke="#d62828"/>
+    <polyline points="400,200 400,100" stroke="#222"/>
+    <polyline points="480,200 480,78 700,78" stroke="#2a6fdb"/>
+    <polyline points="520,200 520,128 700,128" stroke="#2a6fdb"/>
+    <polyline points="600,200 600,178 700,178" stroke="#2a6fdb"/>
+    <polyline points="600,454 600,490 700,490" stroke="#2a6fdb"/>
+    <polyline points="440,454 440,510 275,510 275,540" stroke="#7b2cbf"/>
+    <polyline points="480,454 480,540" stroke="#7b2cbf"/>
+  </g>
+
+  <!-- destination boxes -->
+  <g fill="#fff" stroke="#222" stroke-width="1.5">
+    <rect x="190" y="64" width="120" height="36" rx="4"/>
+    <rect x="330" y="64" width="140" height="36" rx="4"/>
+    <rect x="700" y="60" width="240" height="36" rx="4"/>
+    <rect x="700" y="110" width="240" height="36" rx="4"/>
+    <rect x="700" y="160" width="240" height="36" rx="4"/>
+    <rect x="700" y="472" width="240" height="36" rx="4"/>
+    <rect x="160" y="540" width="230" height="54" rx="4"/>
+    <rect x="405" y="540" width="230" height="54" rx="4"/>
+  </g>
+  <g fill="#222" font-size="13">
+    <text x="250" y="87" text-anchor="middle">Board +5V pad</text>
+    <text x="400" y="87" text-anchor="middle">GND pad (by U1)</text>
+    <text x="710" y="83">÷ 18k/33k  ←  J5 <tspan font-weight="bold">Sleep</tspan></text>
+    <text x="710" y="133">÷ 18k/33k  ←  J5 <tspan font-weight="bold">Speed 1</tspan></text>
+    <text x="710" y="183">÷ 18k/33k  ←  J5 <tspan font-weight="bold">Speed 3</tspan></text>
+    <text x="710" y="495">÷ 18k/33k  ←  J5 <tspan font-weight="bold">Speed 2</tspan></text>
+    <text x="275" y="563" text-anchor="middle">Press circuit → <tspan font-weight="bold">KEY1</tspan></text>
+    <text x="275" y="582" text-anchor="middle" fill="#555" font-size="12">Power button</text>
+    <text x="520" y="563" text-anchor="middle">Press circuit → <tspan font-weight="bold">KEY4</tspan></text>
+    <text x="520" y="582" text-anchor="middle" fill="#555" font-size="12">Speed button</text>
+  </g>
+
+  <!-- legend -->
+  <g font-size="12" fill="#222">
+    <line x1="20" y1="635" x2="50" y2="635" stroke="#d62828" stroke-width="3"/><text x="58" y="639">5 V</text>
+    <line x1="110" y1="635" x2="140" y2="635" stroke="#222" stroke-width="3"/><text x="148" y="639">GND</text>
+    <line x1="210" y1="635" x2="240" y2="635" stroke="#2a6fdb" stroke-width="3"/><text x="248" y="639">state input (via divider)</text>
+    <line x1="430" y1="635" x2="460" y2="635" stroke="#7b2cbf" stroke-width="3"/><text x="468" y="639">press output (via 33k + NPN + 10 pF)</text>
+    <text x="20" y="668" fill="#555">Divider and press-circuit details: see schematic.svg. The dividers' 33 kΩ legs go to board GND. Unused: 3V3, D0, D1, D4, D5, D8.</text>
+  </g>
+</svg>
